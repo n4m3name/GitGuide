@@ -1,0 +1,33 @@
+# Clone a repo
+git clone <link>
+
+# Switch to the repo folder (replace repo-name with the folder name)
+cd repo-name
+
+# ---------------------------------
+
+# Before coding:
+
+## Make sure code is up to date
+git checkout master
+git pull origin master
+
+## Create a branch for your work (only need to do if it doesnt exist)
+git checkout -b my-branch
+
+## Change to your branch & ensure code is up to date
+git checkout my-branch
+git rebase master
+
+# You can now code safely.
+
+# ---------------------------------
+
+# After coding:
+
+## Stage and push changes to your branch
+git add .
+git commit -m "one-line description of changes"
+git push -u origin my-branch
+
+## Now go to github.com and create a pull request!
